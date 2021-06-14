@@ -2,13 +2,13 @@ var express = require('express')
 
 var app = express()
 
-app.use(express.json)
+app.use(express.json())
 
-app.use(express.urlencoded)
+app.use(express.urlencoded())
 
 app.use(express.static(__dirname + '/public'))
 
-app.get('/json',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send('Welcome')
 })
 
